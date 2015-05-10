@@ -34,15 +34,15 @@ library(grDevices)
 png("plot4.png")
 par(mfrow = c(2, 2))
 
-## Create plot 1
+## Create sub-plot 1
 plot(allData$DateTime, allData$Global_active_power, xlab = "", 
      ylab = "Global Active Power", type = 'l')
 
-## Create plot 2
+## Create sub-plot 2
 plot(allData$DateTime, allData$Voltage, xlab = "datetime", ylab = "Voltage", 
      type = 'l')
 
-## Create plot 3
+## Create sub-plot 3
 plot(allData$DateTime, allData$Sub_metering_1, xlab = "", 
      ylab = "Energy sub metering", type = 'l')
 lines(allData$DateTime, allData$Sub_metering_2, col = "red")
@@ -51,7 +51,7 @@ legend("topright", col = c("black", "red", "blue"),
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
        lty = 1, bty = "n")
 
-## Create plot 4
+## Create sub-plot 4
 plot(allData$DateTime, allData$Global_reactive_power, xlab = "datetime", ylab = "Global_reactive_power", 
      type = 'l')
 
